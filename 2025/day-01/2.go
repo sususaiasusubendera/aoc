@@ -7,7 +7,7 @@ import (
 	"os"
 )
 
-func part1() {
+func part2() {
 	file, err := os.Open("input.txt")
 	if err != nil {
 		log.Fatal(err)
@@ -23,13 +23,19 @@ func part1() {
 		dir, num := parseLine(line)
 		switch dir {
 		case 'R':
-			dial = (dial + num) % 100
+			for i := 0; i < num; i++ {
+				dial = (dial + 1) % 100
+				if dial == 0 {
+					countZero++
+				}
+			}
 		case 'L':
-			dial = (dial - num + 100) % 100
-		}
-
-		if dial == 0 {
-			countZero++
+			for i := 0; i < num; i++ {
+				dial = (dial - 1 + 100) % 100
+				if dial == 0 {
+					countZero++
+				}
+			}
 		}
 	}
 
