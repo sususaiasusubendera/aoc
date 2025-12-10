@@ -37,5 +37,5 @@ WIP
 https://adventofcode.com/2025/day/3
 
 ## Answer
-- Part 1:
+- Part 1: 16842
 - Part 2:
