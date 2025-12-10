@@ -36,3 +36,27 @@ func countFreq(n int) map[int]int {
 
 	return m
 }
+
+func isRepeated(s string) bool {
+	mid := len(s) / 2
+	for pat := 1; pat <= mid; pat++ { // pattern digit repeat
+		if len(s)%pat != 0 {
+			continue
+		}
+
+		base := s[:pat]
+		invalid := true
+		for i := pat; i < len(s); i += pat {
+			if s[i:i+pat] != base {
+				invalid = false
+				break
+			}
+		}
+
+		if invalid {
+			return true
+		}
+	}
+
+	return false
+}

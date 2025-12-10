@@ -68,4 +68,4 @@ https://adventofcode.com/2025/day/2
 
 ## Answer
 - Part 1: 38437576669
-- Part 2:
+- Part 2: 49046150754
