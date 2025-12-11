@@ -20,5 +20,9 @@ func readGrid(fileName string) [][]byte {
 		grid = append(grid, []byte(line))
 	}
 
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
+
 	return grid
 }
