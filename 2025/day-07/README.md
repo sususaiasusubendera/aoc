@@ -7,4 +7,4 @@ https://adventofcode.com/2025/day/7
 ## Answer
 
 - Part 1: 1535
-- Part 2: 
+- Part 2: 4404709551015
