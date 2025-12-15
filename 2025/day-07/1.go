@@ -17,8 +17,7 @@ func part1() {
 
 	// bfs
 	ans := 0
-	queue := [][]int{}
-	queue = append(queue, []int{1, startIdx})
+	queue := [][]int{{1, startIdx}}
 	for len(queue) > 0 {
 		curr := queue[0]
 		queue = queue[1:] // pop
@@ -45,13 +44,13 @@ func part1() {
 	fmt.Println(ans) // ans
 
 	// output (after the operation)
-	for i := range m {
-		for j := range n {
-			if j == n-1 {
-				fmt.Println(string(grid[i][j]))
-			} else {
-				fmt.Print(string(grid[i][j]))
-			}
-		}
-	}
+	// for i := range m {
+	// 	for j := range n {
+	// 		if j == n-1 {
+	// 			fmt.Println(string(grid[i][j]))
+	// 		} else {
+	// 			fmt.Print(string(grid[i][j]))
+	// 		}
+	// 	}
+	// }
 }
