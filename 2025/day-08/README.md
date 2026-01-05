@@ -7,4 +7,4 @@ https://adventofcode.com/2025/day/8
 ## Answer
 
 - Part 1: 129564
-- Part 2: 
+- Part 2: 42047840

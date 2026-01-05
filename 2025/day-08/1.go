@@ -39,12 +39,12 @@ func (d *DSU) Find(x int) int {
 	return d.parent[x]
 }
 
-func (d *DSU) Union(a, b int) {
+func (d *DSU) Union(a, b int) bool {
 	ra, rb := d.Find(a), d.Find(b) // root a and b
 
 	if ra == rb {
 		// have same root -> already in same circuit
-		return
+		return false
 	}
 
 	// union by size (optimization)
@@ -55,6 +55,8 @@ func (d *DSU) Union(a, b int) {
 		d.parent[rb] = ra
 		d.size[ra] += d.size[rb]
 	}
+
+	return true
 }
 
 func part1() {
